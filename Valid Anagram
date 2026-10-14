@@ -1,0 +1,19 @@
+class Solution {
+    public boolean isAnagram(String s, String t) {
+       boolean flag=false;
+       
+        HashMap<Character,Integer> freq=new HashMap<>();
+        HashMap<Character,Integer> freq2=new HashMap<>();
+        for(char ch:s.toCharArray()){
+            freq.put(ch,freq.getOrDefault(ch,0)+1);
+        }
+         for(char ch:t.toCharArray()){
+            freq2.put(ch,freq2.getOrDefault(ch,0)+1);
+        }
+        if(freq.equals(freq2)){
+            flag=true;
+        }
+ 
+    return flag;
+}
+}
